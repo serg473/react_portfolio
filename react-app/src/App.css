@@ -1,0 +1,56 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App{
+  width: 1060px;
+}
+h1,h2{
+  text-align: center;
+}
+h1{
+  font-size: 70px;
+  font-weight: 600;
+}
+h2{
+  margin-bottom: 30px;
+  font-size: 50px;
+  color:darkgray;
+}
+.plus,.minus{
+  border: none;
+  padding: 35px 20px;
+  width: 500px;
+  font-size: 24px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.plus{
+  background:crimson;
+  color: white;
+}
+.minus{
+  background: cornflowerblue;
+  color:white;
+}
+.block_button{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+button{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+}
