@@ -5,7 +5,7 @@ import React, {useState} from 'react'
 function App() {
     const [count, setCount] = React.useState(0);
     const onclickPlus = () =>{
-        setCount(count + 1);
+        setCount(count + -1);//increment
     }
     const onClickMinus = () =>{
         setCount(count - 1);
