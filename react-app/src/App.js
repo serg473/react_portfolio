@@ -3,23 +3,23 @@ import './App.css';
 import React, {useState} from 'react'
 
 function App() {
-    const [count, setCount] = React.useState(0);
-    const onclickPlus = () =>{
-        setCount(count + 1);
-    }
-    const onClickMinus = () =>{
-        setCount(count - 1);
-    }
+    const [open, setOpen] = React.useState(false);
     return (
-        <div className="App">
-            <div>
-                <h2>Счетчик:</h2>
-                <h1>{count}</h1>
-                <div className='block_button'>
-                    <button onClick = {onClickMinus} className='minus'>- Minus</button>
-                    <button onClick={onclickPlus} className='plus'>+ Plus</button>
-                </div>
-            </div>
+        <div className='App'>
+            <button onClick={() => setOpen(true)} className='open_modal_btn'>Open modal-window</button>
+            {
+                open && (
+                    <div className='overlay'>
+                        <div className="modal">
+                            <div onClick={() => setOpen(false)} className='close'><img
+                                src="https://img.icons8.com/ios/344/cancel.png" alt=""/></div>
+                            <div><img
+                                src="https://media2.giphy.com/media/hUL5gdlvDgtRbOElZS/giphy.gif?cid=6c09b952ouig7kj7que9462ddztke6n5gyavk3bnruvxu2nx&rid=giphy.gif&ct=s"
+                                alt=""/></div>
+                        </div>
+                    </div>
+                )
+            }
         </div>
     );
 }
